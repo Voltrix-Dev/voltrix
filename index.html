@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltrix Interface — Скачать расширение</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body {
+            background: #09090b;
+            background-image: radial-gradient(circle at 80% 20%, #2e1065 0%, transparent 50%), radial-gradient(circle at 20% 80%, #1b0e30 0%, transparent 50%);
+            color: #f4f4f5;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .landing-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            z-index: 10;
+        }
+        .left-content {
+            flex: 1;
+            max-width: 500px;
+        }
+        .tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #a78bfa;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .description {
+            font-size: 16px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            background: #8b5cf6;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3), 0 0 30px rgba(167, 139, 250, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
+        }
+        .download-btn:hover {
+            background: #a78bfa;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4), 0 0 40px rgba(167, 139, 250, 0.4);
+        }
+        .guide-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(12px);
+        }
+        .guide-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #e4e4e7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .guide-steps {
+            font-size: 13px;
+            color: #a1a1aa;
+            list-style: none;
+            line-height: 1.6;
+        }
+        .guide-steps li {
+            margin-bottom: 6px;
+        }
+        .guide-steps li:last-child {
+            margin-bottom: 0;
+        }
+        .guide-steps code {
+            background: rgba(167, 139, 250, 0.15);
+            color: #c084fc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .right-content {
+            flex: 1.2;
+            display: flex;
+            justify-content: center;
+        }
+        .promo-img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease;
+        }
+        .promo-img:hover {
+            transform: scale(1.02);
+        }
+        /* Блок для мобильных, чтобы не качали на телефоны */
+        .mobile-warning {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 900px) {
+            .landing-container { display: none; }
+            .mobile-warning { display: block; }
+            h2 { font-size: 28px; margin-bottom: 12px; color: #ffffff; }
+            p { font-size: 14px; color: #a1a1aa; line-height: 1.4; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <div class="left-content">
+            <span class="tag">Кастомизация браузера</span>
+            <h1>Voltrix</h1>
+            <p class="description">Стильный и технологичный стартовый экран, заменяющий скучную стандартную страницу. Премиальный минимализм, интерактивные неоновые темы и ничего лишнего.</p>
+            
+            <!-- Замени ССЫЛКА_НА_ДИСК на свою прямую ссылку на .crx файл -->
+            <a href="ССЫЛКА_НА_ДИСК" class="download-btn" target="_blank">Скачать Voltrix .CRX</a>
+            
+            <div class="guide-box">
+                <div class="guide-title">Быстрая установка</div>
+                <ul class="guide-steps">
+                    <li>1. Скачайте файл <code>Voltrix.crx</code> на компьютер.</li>
+                    <li>2. Откройте в Chrome страницу расширений: <code>chrome://extensions/</code></li>
+                    <li>3. В правом верхнем углу включите <b>Режим разработчика</b>.</li>
+                    <li>4. Перетащите скачанный файл мышкой в окно браузера.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="right-content">
+            <!-- Убедитесь, что ваш диагональный скриншот лежит в этой же папке под именем promo.png -->
+            <img src="promo.png" alt="Voltrix Themes" class="promo-img">
+        </div>
+    </div>
+
+    <!-- Заглушка для мобильного трафика из ТикТока -->
+    <div class="mobile-warning">
+        <h2>Voltrix Interface</h2>
+        <p>Это расширение создано исключительно для компьютеров.<br><br>Откройте эту ссылку на вашем ПК или ноутбуке, чтобы скачать и установить кастомный стиль браузера!</p>
+    </div>
+
+</body>
+</html>
